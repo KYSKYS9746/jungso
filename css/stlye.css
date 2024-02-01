@@ -1,0 +1,254 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+:root {
+    --white-color: #ffffff;
+    --main-color: #004694;
+    --title-color: #00073c;
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: transparent;
+
+}
+
+.header .header_wrap {
+    display: flex;
+    line-height: 100px;
+}
+
+.header .gnb {
+    margin: 0 0 0 auto;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 30px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white-color);
+    white-space: nowrap;
+
+}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: 100vh;
+}
+
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/main_visual01.png)no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 {
+    background: url(../images/main_visual02.png)no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm03 {
+    background: url(../images/main_visual03.png)no-repeat center center/cover;
+}
+
+.main_visual .main_visual_slide .itm .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+
+}
+
+.main_visual .main_visual_slide .itm .title span {
+    display: block;
+    margin: 0 0 20px 0;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--white-color);
+
+}
+
+.main_visual .main_visual_slide .itm .title strong {
+    display: block;
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0 0 24px 0;
+    color: var(--white-color);
+}
+
+.main_visual .main_visual_slide .itm .title p {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    color: var(--white-color);
+}
+
+.main_visual .scroll_down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, 0);
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    height: 70px;
+}
+
+.main_visual .scroll_down::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 50px;
+    width: 1px;
+    background: #fff;
+}
+
+.main_visual .scroll_down::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 6px;
+    width: 6px;
+    background: #fff;
+    border-radius: 50%;
+
+    animation: scroll_down 2s infinite;
+}
+
+@keyframes scroll_down {
+    0% {
+        top: 0px;
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        top: 70px;
+        transform: translate(-50%, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        top: 70px;
+        transform: translate(-50%, 0) scale(5);
+        opacity: 0;
+    }
+
+}
+
+.main_consultant .title {
+    position: relative;
+}
+
+.main_consultant .title::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 824px;
+    height: 1px;
+    background: var(--main-color);
+}
+
+.main_consultant .title h3 {
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 20px 0;
+}
+
+.main_consultant .title strong {
+    display: block;
+    font-size: 32px;
+    color: var(--title-color);
+    margin: 0 0 28px 0;
+}
+
+.main_consultant .title strong span {
+    font-weight: 600;
+}
+
+.main_consultant .title p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0 0 24px 0;
+}
+
+.main_consultant .title p em {
+    font-weight: 600;
+}
+
+.main_consultant .title .btn {
+    display: inline-block;
+    padding: 16px 30px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.main_consultant .title .btn::after {
+    content: "\e93e";
+    font-family: xeicon;
+    font-size: 10px;
+    margin: 0 0 0 8px;
+    vertical-align: 1px;
+}
+
+.main_consultant .inner figure {
+    position: relative;
+}
+
+.main_consultant .inner figure img {
+    border-radius: 10px;
+}
+
+.main_consultant .inner .right {
+    position: absolute;
+    right: 0;
+    top: 47px;
+}
+
+.main_Funds {
+    background: url(../images/Funds_bg.png);
+}
+
+.main_Funds .title {
+    text-align: center;
+}
+
+.main_Funds .title h3 {
+    margin: 0 0 20px 0;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 20px;
+
+
+}
+
+.main_Funds .title strong {
+    font-size: 32px;
+    color: var(--white-color);
+}
+
+.main_Funds .title strong span {
+    font-weight: 700;
+}

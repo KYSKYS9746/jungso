@@ -252,3 +252,92 @@
 .main_Funds .title strong span {
     font-weight: 700;
 }
+
+.main_Funds .inner {
+    display: flex;
+
+}
+
+.main_Funds .itm {
+    position: relative;
+    height: 500px;
+    flex: 1;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+.main_Funds .itm.on {
+    flex: 4;
+}
+
+.main_Funds .itm01 {
+    background: url(../images/Funds01.png)no-repeat center top/cover;
+}
+
+.main_Funds .itm02 {
+    background: url(../images/Funds02.png)no-repeat center top/cover;
+}
+
+.main_Funds .itm03 {
+    background: url(../images/Funds03.png)no-repeat center top/cover;
+}
+
+.main_Funds .itm04 {
+    background: url(../images/Funds04.png)no-repeat center top/cover;
+}
+
+.main_Funds .itm05 {
+    background: url(../images/Funds05.png)no-repeat center top/cover;
+}
+
+.main_Funds .inner .itm .funds_front {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.main_Funds .inner .itm .funds_front strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    writing-mode: vertical-rl
+}
+
+.main_Funds .inner .itm.on .funds_front {
+    display: none;
+}
+
+.main_Funds .funds_back {}
+
+.main_Funds .inner .itm .text_top {
+    display: none;
+
+    position: absolute;
+    right: 50px;
+    bottom: 40px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+    padding: 24px 30px;
+
+    width: 300px;
+    height: 200px;
+}
+
+
+.main_Funds .inner .itm.on .text_top {
+    display: block;
+}
+
+.main_Funds .inner .text_top strong {
+    display: block;
+}
+
+.main_Funds .inner .text_top span {
+    display: inline-block;
+}
+
+.main_Funds .inner .text_top {}

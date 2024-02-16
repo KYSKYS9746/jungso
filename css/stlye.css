@@ -75,8 +75,8 @@
 .main_visual .main_visual_slide .itm .title span {
     display: block;
     margin: 0 0 20px 0;
-    font-size: 56px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 100;
     color: var(--white-color);
 
 }
@@ -178,13 +178,13 @@
 
 .main_consultant .title strong {
     display: block;
-    font-size: 32px;
+    font-size: 44px;
     color: var(--title-color);
     margin: 0 0 28px 0;
 }
 
 .main_consultant .title strong span {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .main_consultant .title p {
@@ -198,20 +198,7 @@
     font-weight: 600;
 }
 
-.main_consultant .title .btn {
-    display: inline-block;
-    padding: 16px 30px;
-    border: 1px solid var(--main-color);
-    color: var(--main-color);
-}
 
-.main_consultant .title .btn::after {
-    content: "\e93e";
-    font-family: xeicon;
-    font-size: 10px;
-    margin: 0 0 0 8px;
-    vertical-align: 1px;
-}
 
 .main_consultant .inner figure {
     position: relative;
@@ -228,12 +215,12 @@
 }
 
 .main_Funds {
-    background: url(../images/Funds_bg.png);
+
+    background: url(../images/Funds_bg.png), linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 70%);
+    background-blend-mode: overlay;
 }
 
-.main_Funds .title {
-    text-align: center;
-}
+
 
 .main_Funds .title h3 {
     margin: 0 0 20px 0;
@@ -241,12 +228,13 @@
     font-weight: 500;
     font-size: 20px;
 
-
 }
 
 .main_Funds .title strong {
+    display: block;
     font-size: 32px;
     color: var(--white-color);
+    margin: 0 0 24px 0;
 }
 
 .main_Funds .title strong span {
@@ -255,89 +243,333 @@
 
 .main_Funds .inner {
     display: flex;
-
+    max-width: calc((100% - 1200px)/2 + 1200px);
+    margin: 0 0 0 auto;
 }
 
-.main_Funds .itm {
-    position: relative;
-    height: 500px;
+.main_Funds .inner>* {
     flex: 1;
     overflow: hidden;
-    transition: 1s;
+}
+
+/* .main_Funds .inner .right_box {
+    display: flex;
+    gap: 20px;
+} */
+
+/* .main_Funds .inner .right_box>* {
+    flex: 1;
+    overflow: hidden;
+} */
+
+.main_Funds .inner {
+    padding: 114px 0 0 0;
+}
+
+.main_Funds .right_box {
+    margin: 0 0 0 -800px;
 }
 
 
-.main_Funds .itm.on {
-    flex: 4;
+.main_Funds .itm {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
 }
 
-.main_Funds .itm01 {
-    background: url(../images/Funds01.png)no-repeat center top/cover;
+.main_Funds .itm .txt {
+    position: relative;
+    padding: 24px 40px;
+    word-break: keep-all;
+    height: 150px;
+    line-height: 20px;
 }
 
-.main_Funds .itm02 {
-    background: url(../images/Funds02.png)no-repeat center top/cover;
-}
-
-.main_Funds .itm03 {
-    background: url(../images/Funds03.png)no-repeat center top/cover;
-}
-
-.main_Funds .itm04 {
-    background: url(../images/Funds04.png)no-repeat center top/cover;
-}
-
-.main_Funds .itm05 {
-    background: url(../images/Funds05.png)no-repeat center top/cover;
-}
-
-.main_Funds .inner .itm .funds_front {
+.main_Funds .itm .txt img {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
 }
 
-.main_Funds .inner .itm .funds_front strong {
+.main_Funds .itm .txt strong {
+    display: inline-block;
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.main_Funds .itm .txt span {
+    display: block;
+    margin: 0 0 16px 0;
+    color: var(--main-color);
+
+    font-weight: 500;
+
+}
+
+.main_Policy {
+    border-top: 1px solid #ddd;
+}
+
+.main_Policy .title {
+    text-align: center;
+}
+
+.main_Policy .title h3 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--main-color);
+
+}
+
+.main_Policy .title strong {
+    font-size: 32px;
+}
+
+.main_Policy .title strong span {
+    font-weight: 700;
+}
+
+.main_Policy img {
+    border-radius: 10px;
+}
+
+.main_Policy .content_tab ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 0 0 36px 0;
+}
+
+
+.main_Policy .content_tab .tab_menu>li>a.on {
+    background: var(--main-color);
+    color: #fff;
+}
+
+.main_Policy .content_tab .tab_menu>li>a {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: block;
+    padding: 12px 32px;
+}
+
+
+.main_Policy .tab_content li {
+    display: none;
+}
+
+.main_Policy .tab_content li.on {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    height: 80px;
+
+}
+
+.main_Policy .content_btn {
+    text-align: center;
+}
+
+.main_Policy .content_btn a {
+    padding: 16px 44px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.main_labor {
+    background: url(../images/labor.png) no-repeat fixed center center/cover;
+}
+
+.main_labor .title {
+    text-align: center;
+}
+
+.main_labor .title h3 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white-color);
+
+}
+
+.main_labor .title strong {
+    font-size: 32px;
+    color: var(--white-color);
+}
+
+.main_labor .title strong span {
+    font-weight: 700;
+}
+
+.main_labor .labor_box {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.main_labor .labor_box>* {
+    flex: 1;
+}
+
+.main_labor .labor_box .box {
+    position: relative;
+
+    margin: 0 0 52px 0;
+
+    border: 1px solid var(--white-color);
+    padding: 40px 52px;
+    color: var(--white-color);
+    backdrop-filter: blur(20px);
+    border-image-source: linear-gradient(120deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+    background-color: rgba(95, 95, 95, 0.65);
+
+}
+
+.main_labor .labor_box .box strong {
+    padding: 4px 8px;
+    background: var(--main-color);
+    color: var(--white-color);
+    margin: 0 24px 0 0;
+    font-size: 24px;
+
+}
+
+.main_labor .labor_box .box span {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main_labor .labor_box .box figure {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+}
+
+.main_labor .labor_box .box p {
+    margin: 24px 0 0 0;
+    line-height: 24px;
+    font-size: 18px;
+    word-break: keep-all;
+    font-weight: 100;
+}
+
+.main_labor .labor_box .box p em {
+    font-weight: 600;
+}
+
+.main_labor .inner .btn_box {
+    text-align: center;
+}
+
+
+
+.main_sponsored .title {
+    text-align: center;
+}
+
+.main_sponsored .title h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    margin: 0 0 20px 0;
+
+}
+
+.main_sponsored .title strong {
     display: block;
     font-size: 32px;
+    color: var(--title-color);
+    margin: 0 0 16px 0;
+}
+
+.main_sponsored .title strong em {
+    font-weight: 700;
+}
+
+.main_sponsored .inner .K_box {
+    display: flex;
+    gap: 30px;
+
+}
+
+.main_sponsored .inner .K_box>* {
+    flex: 1;
+}
+
+.main_sponsored .inner .K_box .box {
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.main_sponsored .inner .K_box .txt {
+    padding: 24px 40px;
+}
+
+.main_sponsored .inner .K_box .txt strong {
+    display: block;
+    font-size: 24px;
     font-weight: 600;
-    color: #fff;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    writing-mode: vertical-rl
+    margin: 0 0 24px 0;
 }
 
-.main_Funds .inner .itm.on .funds_front {
-    display: none;
+.main_sponsored .inner .K_box .txt p {
+    line-height: 20px;
+    word-break: keep-all;
 }
 
-.main_Funds .funds_back {}
+.footer {
+    padding: 40px 80px;
+    background: #f9f9f9;
+}
 
-.main_Funds .inner .itm .text_top {
-    display: none;
+.footer .footertop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 40px 0;
+}
 
+.footer .footertop .txt {
+    margin: 0 0 0 auto;
+}
+
+.footer .footertop .txt a {
+    font-weight: 700;
+}
+
+.footer .footertop::before {
+    content: "";
     position: absolute;
-    right: 50px;
-    bottom: 40px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
-    padding: 24px 30px;
-
-    width: 300px;
-    height: 200px;
+    top: 55px;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
 }
 
-
-.main_Funds .inner .itm.on .text_top {
-    display: block;
+.footer .footerbottom {
+    width: 700px;
+    margin: 0 0 20px 0;
 }
 
-.main_Funds .inner .text_top strong {
-    display: block;
-}
+.footer .footerbottom li {
 
-.main_Funds .inner .text_top span {
     display: inline-block;
+    margin: 0 18px 4px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
 }
 
-.main_Funds .inner .text_top {}
+
+
+.footer span {
+    font-weight: 300;
+}

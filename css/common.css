@@ -1,3 +1,9 @@
+:root {
+    --white-color: #ffffff;
+    --main-color: #004694;
+    --title-color: #00073c;
+}
+
 .default {
     padding: 100px 0;
 }
@@ -14,4 +20,20 @@
     width: 100%;
     margin: 0 auto 32px auto;
     padding: 0 15px;
+}
+
+.default .btn {
+    display: inline-block;
+    padding: 16px 30px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    background: var(--white-color);
+}
+
+.default .btn::after {
+    content: "\e93e";
+    font-family: xeicon;
+    font-size: 10px;
+    margin: 0 0 0 8px;
+    vertical-align: 1px;
 }

@@ -1,22 +1,63 @@
 $(function () {
-    var swiper = new Swiper(".main_visual_slide", {
+
+    $('.mopen').on('click', function () {
+        $('.gnb').toggleClass('on');
+        $(this).toggleClass('on');
+    })
+
+    window.addEventListener('scroll', () => {
+        let SCT = window.scrollY;
+        SCT > 0
+            ? document.querySelector('.header').classList.add('on')
+            : document.querySelector('.header').classList.remove('on');
+
+    });
+
+    var MAIN_VISUAL_SLIDE = new Swiper(".main_visual_slide", {
         loop: true,
+        parallax: true,
+        slideActiveClass: 'on',
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
+
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
         },
 
+
     });
+
+    const MAIN_VS_LEFT_BUTTON = document.querySelector('.main_visual .main_slide_arrows .left');
+    MAIN_VS_LEFT_BUTTON.addEventListener('click', () => {
+        MAIN_VISUAL_SLIDE.slidePrev();
+    });
+
+    const MAIN_VS_RIGHT_BUTTON = document.querySelector('.main_visual .main_slide_arrows .right');
+    MAIN_VS_RIGHT_BUTTON.addEventListener('click', () => {
+        MAIN_VISUAL_SLIDE.slideNext();
+    });
+
 
     AOS.init();
 
     const MAIN_FUNDS_SLIDE = new Swiper('.main_Funds_slide', {
         loop: true,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 30,
         autoplay: {
             delay: 4000,
-        }
+        },
+        breakpoints: {
+            '769': {
+                slidesPerView: 2.5,
+                spaceBetween: 40,
+            },
+
+        },
+
     });
 
 
@@ -44,4 +85,5 @@ $(function () {
     });
 
 });
+
 
